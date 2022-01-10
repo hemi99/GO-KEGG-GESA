@@ -7,8 +7,8 @@ from gseapy.parser import Biomart
 from gseapy.plot import barplot, dotplot
 
 
-gene_list = pd.read_csv("/Users/sunxueyan/Downloads/GSEApy-master/tests/data/gene_list.txt",header=None, sep="\t")
-gene_list1 = pd.read_csv("/Users/sunxueyan/Downloads/non_geneID.csv")
+gene_list = pd.read_csv(r"D:\graduate\gene_list.txt",header=None, sep="\t")
+gene_list1 = pd.read_csv(r"D:\graduate\non_geneID.csv")
 gene_list1.head()
 
 glist = gene_list1.squeeze().str.strip().tolist()
@@ -19,7 +19,7 @@ s.keep_alive = False
 
 
 
-enr = gp.enrichr(gene_list="/Users/sunxueyan/Downloads/GSEApy-master/tests/data/gene_list.txt",
+enr = gp.enrichr(gene_list=r"D:/graduate/gene_list.txt",
      # or gene_list=glist
      description='',
      gene_sets=['KEGG_2019_Human'],
